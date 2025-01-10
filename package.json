@@ -1,0 +1,8 @@
+{
+  "name": "vuix",
+  "version": "0.0.0",
+  "description": "Vue.js UI component library, focusing on the best UX",
+  "keywords": ["vuejs","vue3","ui-components"],
+  "author": "litingyes <luz.liting@gmail.com> (https://litingyes.top/)",
+  "license": "MIT"
+}
