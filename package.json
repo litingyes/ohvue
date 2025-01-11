@@ -2,7 +2,20 @@
   "name": "ohvue",
   "version": "0.0.0",
   "description": "Vue.js UI component library, focusing on the best UX",
-  "keywords": ["vuejs","vue3","ui-components"],
   "author": "litingyes <luz.liting@gmail.com> (https://litingyes.top/)",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "vuejs",
+    "vue3",
+    "ui-components"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.13.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-format": "^1.0.1"
+  }
 }
