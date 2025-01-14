@@ -7,3 +7,4 @@
 
 - [Ant Design](https://ant.design/)
 - [NextUI](https://nextui.org/)
+- [Naive UI](https://www.naiveui.com/en-US/)
