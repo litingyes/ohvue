@@ -1,7 +1,9 @@
 {
   "cSpell.words": [
+    "mkdist",
     "ohvue",
-    "vuejs",
+    "unplugin",
+    "vuejs"
   ],
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,

@@ -1,0 +1,33 @@
+{
+  "name": "@ohvue/storybook",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Vue.js UI component library, focusing on the best UX",
+  "author": "litingyes <luz.liting@gmail.com> (https://litingyes.top/)",
+  "license": "MIT",
+  "keywords": [
+    "vuejs",
+    "vue3",
+    "ui-components"
+  ],
+  "scripts": {
+    "dev": "storybook dev",
+    "build": "storybook build -o dist"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.3",
+    "@storybook/addon-a11y": "^8.4.7",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@storybook/vue3": "catalog:",
+    "@storybook/vue3-vite": "^8.4.7",
+    "fast-glob": "^3.3.3",
+    "storybook": "^8.4.7",
+    "unplugin-vue": "catalog:",
+    "vite": "catalog:"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@ohvue/utils",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Vue.js UI component library, focusing on the best UX",
+  "author": "litingyes <luz.liting@gmail.com> (https://litingyes.top/)",
+  "license": "MIT",
+  "keywords": [
+    "vuejs",
+    "vue3",
+    "ui-components",
+    "utils"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

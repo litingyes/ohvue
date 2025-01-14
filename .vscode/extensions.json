@@ -1,6 +1,8 @@
 {
   "recommendations": [
     "streetsidesoftware.code-spell-checker",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "vue.volar"
   ]
 }
