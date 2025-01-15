@@ -11,7 +11,7 @@ export default {
       return null
     }
 
-    const deps = Array.from(new Set([...Object.keys(info.devDependencies ?? {}), ...Object.keys(info.peerDependencies ?? {})]))
+    const deps = Array.from(new Set([...Object.keys(info.dependencies ?? {}), ...Object.keys(info.peerDependencies ?? {})]))
 
     return ({
       build: {
@@ -45,7 +45,7 @@ function getPackageJsonInfo(cwd: string) {
 
   try {
     return JSON.parse(data) as {
-      devDependencies?: Record<string, string>
+      dependencies?: Record<string, string>
       peerDependencies?: Record<string, string>
     }
   }
