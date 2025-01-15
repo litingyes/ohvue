@@ -1,9 +1,15 @@
 {
   "cSpell.words": [
+    "autodocs",
+    "iconify",
     "mkdist",
     "ohvue",
+    "storysource",
     "unplugin",
-    "vuejs"
+    "usexx",
+    "VIEWPORTS",
+    "vuejs",
+    "vueuse"
   ],
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
