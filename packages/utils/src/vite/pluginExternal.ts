@@ -11,7 +11,8 @@ export default {
       return null
     }
 
-    const deps = Array.from(new Set([...Object.keys(info.dependencies ?? {}), ...Object.keys(info.peerDependencies ?? {})]))
+    const deps: (string | RegExp)[] = Array.from(new Set([...Object.keys(info.dependencies ?? {}), ...Object.keys(info.peerDependencies ?? {})]))
+    deps.push(/^node:/)
 
     return ({
       build: {

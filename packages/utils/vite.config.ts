@@ -9,9 +9,6 @@ export default defineConfig({
       fileName: 'index',
       formats: ['es'],
     },
-    rollupOptions: {
-      external: ['node:fs', 'node:path', 'node:process'],
-    },
   },
   plugins: [Dts(), viteExternal],
 })
