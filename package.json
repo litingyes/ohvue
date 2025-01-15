@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "storybook:dev": "pnpm --filter @ohvue/storybook dev",
+    "storybook:build": "pnpm --filter @ohvue/storybook build",
     "build": "pnpm -r build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
