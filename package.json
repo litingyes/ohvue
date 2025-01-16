@@ -13,7 +13,7 @@
   "scripts": {
     "storybook:dev": "pnpm --filter @ohvue/storybook dev",
     "storybook:build": "pnpm --filter @ohvue/storybook build",
-    "build": "pnpm --filter @ohvue/utils build && pnpm --filter @ohvue/composables build && pnpm --filter \"./packages/components/**\" build && pnpm --filter @ohvue/storybook build && pnpm --filter ohvue build",
+    "build": "pnpm --filter @ohvue/utils build && pnpm --filter @ohvue/theme build && pnpm --filter @ohvue/composables build && pnpm --filter \"./packages/components/**\" build && pnpm --filter @ohvue/storybook build && pnpm --filter ohvue build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "commit": "git-cz",

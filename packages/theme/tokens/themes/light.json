@@ -1,0 +1,13 @@
+{
+  "light": {
+    "$type": "color",
+    "background": {
+      "$value": "#FFFFFF",
+      "themeable": true
+    },
+    "foreground": {
+      "$value": "#11181C",
+      "themeable": true
+    }
+  }
+}

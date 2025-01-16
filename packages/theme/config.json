@@ -1,0 +1,38 @@
+{
+  "source": ["tokens/**/*.json"],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "dist/css/",
+      "prefix": "ohvue",
+      "files": [
+        {
+          "destination": "theme.css",
+          "format": "css/variables"
+        }
+      ]
+    },
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "dist/scss/",
+      "prefix": "ohvue",
+      "files": [
+        {
+          "destination": "theme.scss",
+          "format": "scss/variables"
+        }
+      ]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "dist/js/",
+      "prefix": "ohvue",
+      "files": [
+        {
+          "destination": "theme.js",
+          "format": "javascript/es6"
+        }
+      ]
+    }
+  }
+}

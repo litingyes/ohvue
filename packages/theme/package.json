@@ -1,0 +1,26 @@
+{
+  "name": "@ohvue/theme",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Vue.js UI component library, focusing on the best UX",
+  "author": "litingyes <luz.liting@gmail.com> (https://litingyes.top/)",
+  "license": "MIT",
+  "keywords": [
+    "vuejs",
+    "vue3",
+    "ui-components",
+    "theme"
+  ],
+  "exports": {
+    "./theme.css": "./dist/css/theme.css",
+    "./theme.scss": "./dist/scss/theme.css",
+    "./theme.js": "./dist/js/theme.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "style-dictionary build"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.3.0"
+  }
+}
