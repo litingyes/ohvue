@@ -1,6 +1,6 @@
+import External from 'unplugin-external/vite'
 import { defineConfig } from 'vite'
 import Dts from 'vite-plugin-dts'
-import { viteExternal } from './src/index'
 
 export default defineConfig({
   build: {
@@ -10,5 +10,5 @@ export default defineConfig({
       formats: ['es'],
     },
   },
-  plugins: [Dts(), viteExternal],
+  plugins: [Dts(), External()],
 })

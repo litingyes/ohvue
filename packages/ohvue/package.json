@@ -28,7 +28,7 @@
     "@ohvue/icon": "workspace:*"
   },
   "devDependencies": {
-    "@ohvue/utils": "workspace:*",
+    "unplugin-external": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:"
   }

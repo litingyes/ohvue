@@ -23,7 +23,7 @@
     "vue": "catalog:"
   },
   "devDependencies": {
-    "@ohvue/utils": "workspace:*",
+    "unplugin-external": "catalog:",
     "usexx": "0.1.0-beta.5",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:"

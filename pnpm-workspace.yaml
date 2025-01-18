@@ -6,6 +6,7 @@ packages:
   - packages/storybook
 
 catalog:
+  unplugin-external: ^0.1.0-beta.2
   unplugin-vue: ^5.2
   vite: ^6
   vite-plugin-dts: ^4.5

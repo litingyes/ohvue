@@ -1,4 +1,4 @@
-import { viteExternal } from '@ohvue/utils'
+import External from 'unplugin-external/vite'
 import { defineConfig } from 'vite'
 import Dts from 'vite-plugin-dts'
 
@@ -10,5 +10,5 @@ export default defineConfig({
       formats: ['es'],
     },
   },
-  plugins: [Dts(), viteExternal],
+  plugins: [Dts(), External()],
 })

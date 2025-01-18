@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@storybook/vue3": "catalog:",
+    "unplugin-external": "catalog:",
     "unplugin-vue": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:"

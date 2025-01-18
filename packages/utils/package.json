@@ -29,6 +29,7 @@
     "vue": "catalog:"
   },
   "devDependencies": {
+    "unplugin-external": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:"
   }
