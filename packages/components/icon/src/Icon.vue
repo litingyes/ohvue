@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { OhIconProps } from './type'
+import type { OhIconProps } from './types'
 import { Icon } from '@iconify/vue'
 
 import { useComponentClass } from '@ohvue/composables'
@@ -28,3 +28,4 @@ const ns = useComponentClass('icon')
     :ssr="ssr"
   />
 </template>
+./types

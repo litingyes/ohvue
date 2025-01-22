@@ -1,0 +1,39 @@
+{
+  "name": "@ohvue/button",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Vue.js UI component library, focusing on the best UX",
+  "author": "litingyes <luz.liting@gmail.com> (https://litingyes.top/)",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "vue": "catalog:"
+  },
+  "dependencies": {
+    "@ohvue/composables": "workspace:*",
+    "@ohvue/theme": "workspace:*",
+    "@ohvue/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/vue3": "catalog:",
+    "sass-embedded": "catalog:",
+    "unplugin-external": "catalog:",
+    "unplugin-vue": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-lib-inject-css": "catalog:"
+  }
+}

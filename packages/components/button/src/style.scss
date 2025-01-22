@@ -1,0 +1,157 @@
+@use '../node_modules/@ohvue/theme/dist/scss' as *;
+@use 'sass:color';
+
+@include b(button) {
+  display: inline-flex;
+  align-items: center;
+  gap: getDimensionValue(gap, 1);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: all ease 0.3s;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @include m(size-sm) {
+    font: getTextStyleValue(sm);
+    padding: getDimensionValue(padding, 1) getDimensionValue(padding, 2);
+  }
+  @include m(size-md) {
+    font: getTextStyleValue(base);
+    padding: getDimensionValue(padding, 1) getDimensionValue(padding, 3);
+  }
+  @include m(size-lg) {
+    font: getTextStyleValue(xl);
+    padding: getDimensionValue(padding, 1) getDimensionValue(padding, 4);
+  }
+
+  @include m(radius-none) {
+    border-radius: getDimensionValue(border-radius, none);
+  }
+  @include m(radius-sm) {
+    border-radius: getDimensionValue(border-radius, sm);
+  }
+  @include m(radius-md) {
+    border-radius: getDimensionValue(border-radius, md);
+  }
+  @include m(radius-lg) {
+    border-radius: getDimensionValue(border-radius, lg);
+  }
+  @include m(radius-full) {
+    border-radius: getDimensionValue(border-radius, full);
+  }
+
+  @include m(color-default) {
+    @include with-m(variant-solid) {
+      color: getThemeValue(light, foreground-inverse);
+      background: getColorValue(gray-400);
+
+      &:hover {
+        background: getColorValue(gray-500);
+      }
+
+      @include theme(dark) {
+        color: getThemeValue(dark, foreground-inverse);
+        background: getColorValue(gray-600);
+
+        &:hover {
+          background: getColorValue(gray-500);
+        }
+      }
+    }
+
+    @include with-m(variant-bordered) {
+      color: getColorValue(gray-950);
+      border: getDimensionValue(border-width, 1) solid getColorValue(gray-400);
+
+      &:hover {
+        background: getColorValue(gray-100);
+      }
+
+      @include theme(dark) {
+        color: getColorValue(gray-50);
+        border-color: getColorValue(gray-600);
+
+        &:hover {
+          background: getColorValue(gray-900);
+        }
+      }
+    }
+
+    @include with-m(variant-light) {
+      color: getColorValue(gray-950);
+
+      &:hover {
+        background: getColorValue(gray-200);
+      }
+
+      @include theme(dark) {
+        color: getColorValue(gray-50);
+
+        &:hover {
+          background: getColorValue(gray-800);
+        }
+      }
+    }
+
+    @include with-m(variant-flat) {
+      color: getColorValue(gray-950);
+      background: getColorValue(gray-100);
+
+      &:hover {
+        background: getColorValue(gray-200);
+      }
+
+      @include theme(dark) {
+        color: getColorValue(gray-50);
+        background: getColorValue(gray-900);
+
+        &:hover {
+          background: getColorValue(gray-800);
+        }
+      }
+    }
+
+    @include with-m(variant-ghost) {
+      color: getColorValue(gray-950);
+      border: getDimensionValue(border-width, 1) solid getColorValue(gray-400);
+
+      &:hover {
+        background: getColorValue(gray-400);
+      }
+
+      @include theme(dark) {
+        color: getColorValue(gray-50);
+        border-color: getColorValue(gray-600);
+
+        &:hover {
+          background: getColorValue(gray-600);
+        }
+      }
+    }
+
+    @include with-m(variant-shadow) {
+      color: getThemeValue(light, foreground-inverse);
+      background: getColorValue(gray-400);
+      box-shadow: 2px 8px 20px 2px getColorValue(gray-200);
+
+      &:hover {
+        background: getColorValue(gray-500);
+        box-shadow: 2px 8px 20px 0 getColorValue(gray-200);
+      }
+
+      @include theme(dark) {
+        color: getThemeValue(dark, foreground-inverse);
+        background: getColorValue(gray-600);
+        box-shadow: 2px 8px 20px 1px getColorValue(gray-900);
+
+        &:hover {
+          background: getColorValue(gray-500);
+          box-shadow: 2px 8px 20px 0 getColorValue(gray-950);
+        }
+      }
+    }
+  }
+}
