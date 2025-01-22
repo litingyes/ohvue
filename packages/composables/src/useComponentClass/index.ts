@@ -17,11 +17,20 @@ export function useComponentClass(componentName: string, options?: UseClassOptio
 
   const e = (e: string) => `${b}__${kebabCase(e)}`
 
-  const em = (e: string, m: string) => `${b}__${kebabCase(e)}--is-${kebabCase(m)}`
+  const m = (m: string) => `${b}--${kebabCase(m)}`
+
+  const is = (state: string) => `${b}--is-${kebabCase(state)}`
+
+  const em = (e: string, m: string) => `${b}__${kebabCase(e)}--${kebabCase(m)}`
+  const eis = (e: string, state: string) => `${b}__${kebabCase(e)}--is-${kebabCase(state)}`
 
   return {
     b,
     e,
+    m,
+    is,
+
     em,
+    eis,
   }
 }
