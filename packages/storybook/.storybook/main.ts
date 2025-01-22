@@ -19,6 +19,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
+    '@storybook/addon-themes',
   ],
   framework: '@storybook/vue3-vite',
   core: {

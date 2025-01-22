@@ -1,4 +1,5 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["./.storybook/*.ts"]
+  "include": ["./.storybook/*.ts", "../components/**/*.stories.ts"],
+  "exclude": ["node_modules"]
 }
