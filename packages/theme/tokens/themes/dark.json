@@ -1,13 +1,14 @@
 {
-  "light": {
+  "dark": {
     "$type": "color",
     "background": {
-      "$value": "#000000",
-      "themeable": true
+      "$value": "{color.black}"
     },
     "foreground": {
-      "$value": "#ECEDEE",
-      "themeable": true
+      "$value": "{color.neutral.100}"
+    },
+    "foregroundInverse": {
+      "$value": "{color.neutral.900}"
     }
   }
 }

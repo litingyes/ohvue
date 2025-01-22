@@ -1,0 +1,65 @@
+@use './variables.scss' as *;
+@use './functions.scss' as *;
+@use 'sass:string';
+
+@mixin b($block) {
+  .#{$namespace}-#{$block} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+@mixin with-m($modifier) {
+  $current-selector: #{&};
+
+  $modifier-index: string.index($current-selector, '--');
+  $prefix: $current-selector;
+
+  @if $modifier-index == null {
+    $prefix: $current-selector;
+  } @else {
+    $prefix: string.slice($current-selector, 0, $modifier-index - 1);
+  }
+
+  &#{$prefix}--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin is($state) {
+  &--is-#{$state} {
+    @content;
+  }
+}
+@mixin with-is($state) {
+  $current-selector: #{&};
+
+  $modifier-index: string.index($current-selector, '--');
+  $prefix: $current-selector;
+
+  @if $modifier-index == null {
+    $prefix: $current-selector;
+  } @else {
+    $prefix: string.slice($current-selector, 0, $modifier-index - 1);
+  }
+
+  &#{$prefix}--is-#{$state} {
+    @content;
+  }
+}
+
+@mixin theme($theme) {
+  @at-root .#{$theme} & {
+    @content;
+  }
+}

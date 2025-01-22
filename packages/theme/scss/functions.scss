@@ -1,0 +1,32 @@
+@use './variables.scss' as *;
+
+@function getColorValue($key) {
+  @return var(--#{$namespace}-color-#{$key});
+}
+@function getThemeValue($theme, $key) {
+  @return var(--#{$namespace}-#{$theme}-#{$key});
+}
+
+@function getDimensionValue($key, $size) {
+  @return var(--#{$namespace}-#{$key}-#{$size});
+}
+
+@function getTextStyleValue($key) {
+  @return var(--#{$namespace}-text-style-#{$key});
+}
+@function getFontWeightValue($key) {
+  @return var(--#{$namespace}-font-weight-#{$key});
+}
+
+@function hasB($block) {
+  @return #{$namespace}-#{$block};
+}
+@function hasBE($block, $element) {
+  @return #{hasB($block)}__#{$element};
+}
+@function hasBM($block, $modifier) {
+  @return #{hasB($block)}--#{$modifier};
+}
+@function hasBIS($block, $state) {
+  @return #{hasB($block)}--is-#{$state};
+}

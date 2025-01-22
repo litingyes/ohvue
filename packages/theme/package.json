@@ -13,12 +13,12 @@
   ],
   "exports": {
     "./theme.css": "./dist/css/theme.css",
-    "./theme.scss": "./dist/scss/theme.css",
-    "./theme.js": "./dist/js/theme.js"
+    "./utils.scss": "./dist/scss/index.scss",
+    "./*": "./dist/*"
   },
   "files": ["dist"],
   "scripts": {
-    "build": "style-dictionary build"
+    "build": "jiti ./scripts/build.ts && style-dictionary build"
   },
   "devDependencies": {
     "style-dictionary": "^4.3.0"

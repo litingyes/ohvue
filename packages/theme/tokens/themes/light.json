@@ -2,12 +2,13 @@
   "light": {
     "$type": "color",
     "background": {
-      "$value": "#FFFFFF",
-      "themeable": true
+      "$value": "{color.white}"
     },
     "foreground": {
-      "$value": "#11181C",
-      "themeable": true
+      "$value": "{color.neutral.900}"
+    },
+    "foregroundInverse": {
+      "$value": "{color.neutral.100}"
     }
   }
 }
