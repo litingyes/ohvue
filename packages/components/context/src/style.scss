@@ -1,0 +1,23 @@
+@use '../node_modules/@ohvue/theme/dist/scss' as *;
+@import url('@ohvue/theme/theme.css');
+
+// reset
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+// style
+body {
+  background-color: getThemeValue(light, background);
+  color: getThemeValue(light, foreground);
+
+  @include theme(dark) {
+    background-color: getThemeValue(dark, background);
+    color: getThemeValue(dark, foreground);
+  }
+}
