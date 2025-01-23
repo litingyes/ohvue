@@ -64,18 +64,18 @@
 
     @include with-m(variant-bordered) {
       color: getColorValue(gray-950);
-      border: getDimensionValue(border-width, 1) solid getColorValue(gray-400);
+      border: getDimensionValue(border-width, 1) solid getColorValue(gray-200);
 
       &:hover {
-        background: getColorValue(gray-100);
+        background: getColorValue(gray-200);
       }
 
       @include theme(dark) {
         color: getColorValue(gray-50);
-        border-color: getColorValue(gray-600);
+        border-color: getColorValue(gray-800);
 
         &:hover {
-          background: getColorValue(gray-900);
+          background: getColorValue(gray-800);
         }
       }
     }
