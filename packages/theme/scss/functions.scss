@@ -1,4 +1,5 @@
 @use './variables.scss' as *;
+@use 'sass:string';
 
 @function getColorValue($key) {
   @return var(--#{$namespace}-color-#{$key});
@@ -18,15 +19,12 @@
   @return var(--#{$namespace}-font-weight-#{$key});
 }
 
-@function hasB($block) {
-  @return #{$namespace}-#{$block};
-}
-@function hasBE($block, $element) {
-  @return #{hasB($block)}__#{$element};
-}
-@function hasBM($block, $modifier) {
-  @return #{hasB($block)}--#{$modifier};
-}
-@function hasBIS($block, $state) {
-  @return #{hasB($block)}--is-#{$state};
+@function cutTail($selector, $start) {
+  $index: string.index($current-selector, $start);
+
+  @if $modifier-index == null {
+    @return $selector;
+  } @else {
+    @return string.slice($current-selector, 0, $modifier-index - 1);
+  }
 }

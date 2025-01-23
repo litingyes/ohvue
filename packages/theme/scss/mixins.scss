@@ -20,18 +20,9 @@
   }
 }
 @mixin with-m($modifier) {
-  $current-selector: #{&};
+  $selector: #{&};
 
-  $modifier-index: string.index($current-selector, '--');
-  $prefix: $current-selector;
-
-  @if $modifier-index == null {
-    $prefix: $current-selector;
-  } @else {
-    $prefix: string.slice($current-selector, 0, $modifier-index - 1);
-  }
-
-  &#{$prefix}--#{$modifier} {
+  &#{cutTail($selector,'--')}--#{$modifier} {
     @content;
   }
 }
@@ -42,18 +33,9 @@
   }
 }
 @mixin with-is($state) {
-  $current-selector: #{&};
+  $selector: #{&};
 
-  $modifier-index: string.index($current-selector, '--');
-  $prefix: $current-selector;
-
-  @if $modifier-index == null {
-    $prefix: $current-selector;
-  } @else {
-    $prefix: string.slice($current-selector, 0, $modifier-index - 1);
-  }
-
-  &#{$prefix}--is-#{$state} {
+  &#{cutTail($selector,'--')}--is-#{$state} {
     @content;
   }
 }
