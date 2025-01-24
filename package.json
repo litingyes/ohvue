@@ -13,7 +13,7 @@
   "scripts": {
     "storybook:dev": "pnpm --filter @ohvue/storybook dev",
     "storybook:build": "pnpm --filter @ohvue/storybook build",
-    "build": "pnpm --filter @ohvue/utils build && pnpm --filter @ohvue/theme build && pnpm --filter @ohvue/composables build && pnpm --filter \"./packages/components/**\" build && pnpm --filter @ohvue/storybook build && pnpm --filter ohvue build",
+    "build": "jiti ./scripts/build.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "commit": "git-cz",
@@ -33,6 +33,7 @@
     "eslint": "^9.17.0",
     "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-storybook": "^0.11.2",
+    "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.0",
     "husky": "^9.1.7",
     "inquirer": "^12.3.2",

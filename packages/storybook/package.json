@@ -29,7 +29,6 @@
     "storybook": "^8.5.0"
   },
   "devDependencies": {
-    "fast-glob": "^3.3.3",
     "unplugin-vue": "catalog:",
     "vite": "catalog:"
   }
