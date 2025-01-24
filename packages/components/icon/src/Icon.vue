@@ -9,7 +9,7 @@ defineOptions({
 })
 
 withDefaults(defineProps<OhIconProps>(), {
-  width: 20,
+  width: '1em',
   color: 'currentcolor',
   inline: true,
   ssr: false,
