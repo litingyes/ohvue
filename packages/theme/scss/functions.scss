@@ -20,11 +20,11 @@
 }
 
 @function cutTail($selector, $start) {
-  $index: string.index($current-selector, $start);
+  $index: string.index($selector, $start);
 
-  @if $modifier-index == null {
+  @if $index == null {
     @return $selector;
   } @else {
-    @return string.slice($current-selector, 0, $modifier-index - 1);
+    @return string.slice($selector, 0, $index - 1);
   }
 }
