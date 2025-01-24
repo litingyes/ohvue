@@ -28,7 +28,7 @@ const classes = computed(() => {
     ns.m(`radius-${props.radius}`),
     ns.m(`color-${props.color}`),
     ns.m(`variant-${props.variant}`),
-    props.isIconOnly ? ns.is('icon-only') : '',
+    props.isIconOnly && props.icon ? ns.is('icon-only') : '',
     props.disabled ? ns.is('disabled') : '',
   ].filter(Boolean)
 
@@ -37,12 +37,12 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <button :class="classes">
+  <button :class="classes" :aria-label="ariaLabel">
     <i v-if="icon" :class="ns.e('icon')">
       <OhIcon v-if="isString(icon)" :name="icon" />
       <component :is="icon" />
     </i>
-    <slot />
+    <slot v-if="!icon || !isIconOnly" />
   </button>
 </template>
 

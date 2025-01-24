@@ -40,4 +40,9 @@ export interface OhButtonProps {
    * Button is disabled
    */
   disabled?: boolean
+
+  /**
+   * Aria label is required when button is icon only
+   */
+  ariaLabel?: string
 }

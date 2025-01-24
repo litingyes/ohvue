@@ -42,6 +42,9 @@
     },
     "8": {
       "$value": "2rem"
+    },
+    "9": {
+      "$value": "2.25rem"
     }
   },
   "borderRadius": {

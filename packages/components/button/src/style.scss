@@ -3,6 +3,7 @@
 
 @include b(button) {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
   background: transparent;
@@ -21,6 +22,12 @@
     @include include-e(icon) {
       font-size: getDimensionValue(size, 4);
     }
+
+    @include with-is(icon-only) {
+      padding: getDimensionValue(padding, 0);
+      width: getDimensionValue(size, 7);
+      height: getDimensionValue(size, 7);
+    }
   }
   @include m(size-md) {
     font: getTextStyleValue(base);
@@ -30,6 +37,12 @@
     @include include-e(icon) {
       font-size: getDimensionValue(size, 5);
     }
+
+    @include with-is(icon-only) {
+      padding: getDimensionValue(padding, 0);
+      width: getDimensionValue(size, 8);
+      height: getDimensionValue(size, 8);
+    }
   }
   @include m(size-lg) {
     font: getTextStyleValue(xl);
@@ -38,6 +51,12 @@
 
     @include include-e(icon) {
       font-size: getDimensionValue(size, 6);
+    }
+
+    @include with-is(icon-only) {
+      padding: getDimensionValue(padding, 0);
+      width: getDimensionValue(size, 9);
+      height: getDimensionValue(size, 9);
     }
   }
 
