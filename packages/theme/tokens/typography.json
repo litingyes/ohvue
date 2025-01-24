@@ -4,36 +4,36 @@
     "xs": {
       "$value": {
         "fontFamily": "ui-sans-serif",
-        "fontSize": "0.75rem",
-        "lineHeight": "1rem"
+        "fontSize": "{size.3}",
+        "lineHeight": "{size.4}"
       }
     },
     "sm": {
       "$value": {
         "fontFamily": "ui-sans-serif",
-        "fontSize": "0.875rem",
-        "lineHeight": "1.25rem"
+        "fontSize": "{size.3-5}",
+        "lineHeight": "{size.5}"
       }
     },
     "base": {
       "$value": {
         "fontFamily": "ui-sans-serif",
-        "fontSize": "1rem",
-        "lineHeight": "1.5rem"
+        "fontSize": "{size.4}",
+        "lineHeight": "{size.6}"
       }
     },
     "lg": {
       "$value": {
         "fontFamily": "ui-sans-serif",
-        "fontSize": "1.125rem",
-        "lineHeight": "1.75rem"
+        "fontSize": "{size.4-5}",
+        "lineHeight": "{size.7}"
       }
     },
     "xl": {
       "$value": {
         "fontFamily": "ui-sans-serif",
-        "fontSize": "1.25rem",
-        "lineHeight": "1.75rem"
+        "fontSize": "{size.5}",
+        "lineHeight": "{size.7}"
       }
     },
     "2xl": {

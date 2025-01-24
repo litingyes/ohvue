@@ -13,6 +13,20 @@
     @content;
   }
 }
+@mixin include-e($element) {
+  $selector: #{&};
+  $index: string.index($selector, '__');
+
+  @if $index == null {
+    & #{cutTail($selector,'--')}__#{$element} {
+      @content;
+    }
+  } @else {
+    & #{cutTail($selector,'__')}__#{$element} {
+      @content;
+    }
+  }
+}
 
 @mixin m($modifier) {
   &--#{$modifier} {
@@ -26,6 +40,13 @@
     @content;
   }
 }
+@mixin include-m($modifier) {
+  $selector: #{&};
+
+  & #{cutTail($selector,'--')}--#{$modifier} {
+    @content;
+  }
+}
 
 @mixin is($state) {
   &--is-#{$state} {
@@ -36,6 +57,13 @@
   $selector: #{&};
 
   &#{cutTail($selector,'--')}--is-#{$state} {
+    @content;
+  }
+}
+@mixin include-is($modifier) {
+  $selector: #{&};
+
+  & #{cutTail($selector,'--')}--is-#{$modifier} {
     @content;
   }
 }
