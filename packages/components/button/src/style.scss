@@ -4,7 +4,6 @@
 @include b(button) {
   display: inline-flex;
   align-items: center;
-  gap: getDimensionValue(gap, 1);
   cursor: pointer;
   background: transparent;
   border: none;
@@ -17,14 +16,29 @@
   @include m(size-sm) {
     font: getTextStyleValue(sm);
     padding: getDimensionValue(padding, 1) getDimensionValue(padding, 2);
+    gap: getDimensionValue(gap, '0-5');
+
+    @include include-e(icon) {
+      font-size: getDimensionValue(size, 4);
+    }
   }
   @include m(size-md) {
     font: getTextStyleValue(base);
     padding: getDimensionValue(padding, 1) getDimensionValue(padding, 3);
+    gap: getDimensionValue(gap, 1);
+
+    @include include-e(icon) {
+      font-size: getDimensionValue(size, 5);
+    }
   }
   @include m(size-lg) {
     font: getTextStyleValue(xl);
     padding: getDimensionValue(padding, 1) getDimensionValue(padding, 4);
+    gap: getDimensionValue(gap, 1);
+
+    @include include-e(icon) {
+      font-size: getDimensionValue(size, 6);
+    }
   }
 
   @include m(radius-none) {

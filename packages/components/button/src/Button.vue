@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import type { OhButtonProps } from './types'
 import { useComponentClass } from '@ohvue/composables'
+import { OhIcon } from '@ohvue/icon'
+import { isString } from 'usexx'
 import { computed } from 'vue'
 
 defineOptions({
@@ -36,6 +38,10 @@ const classes = computed(() => {
 
 <template>
   <button :class="classes">
+    <i v-if="icon" :class="ns.e('icon')">
+      <OhIcon v-if="isString(icon)" :name="icon" />
+      <component :is="icon" />
+    </i>
     <slot />
   </button>
 </template>

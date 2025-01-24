@@ -10,6 +10,7 @@ catalog:
   sass-embedded: ^1.83.4
   unplugin-external: ^0.1.0-beta.2
   unplugin-vue: ^5.2
+  usexx: ^0.1.0-beta.6
   vite: ^6
   vite-plugin-dts: ^4.5
   vite-plugin-lib-inject-css: ^2.2.1

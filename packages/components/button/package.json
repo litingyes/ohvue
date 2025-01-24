@@ -24,8 +24,10 @@
   },
   "dependencies": {
     "@ohvue/composables": "workspace:*",
+    "@ohvue/icon": "workspace:*",
     "@ohvue/theme": "workspace:*",
-    "@ohvue/utils": "workspace:*"
+    "@ohvue/utils": "workspace:*",
+    "usexx": "catalog:"
   },
   "devDependencies": {
     "@storybook/vue3": "catalog:",
