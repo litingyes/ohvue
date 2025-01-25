@@ -21,8 +21,9 @@ const props = withDefaults(defineProps<OhButtonProps>(), {
 
 const ns = useComponentClass('button')
 
-const showIcon = computed(() => props.loading || props.icon)
-const isDisabled = computed(() => props.loading || props.disabled)
+const isDisabled = computed(() => props.disabled)
+const isLoading = computed(() => !props.disabled && props.loading)
+const showIcon = computed(() => props.icon || isLoading.value)
 
 const classes = computed(() => {
   const classes = [
@@ -33,7 +34,7 @@ const classes = computed(() => {
     ns.m(`variant-${props.variant}`),
     ns.is('icon-only', props.isIconOnly && !!props.icon),
     ns.is('loading', props.loading),
-    ns.is('disabled', isDisabled.value),
+    ns.is('disabled', isDisabled.value || isLoading.value),
   ].filter(Boolean)
 
   return classes
@@ -41,9 +42,9 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <button :class="classes" :disabled="isDisabled" :aria-label="ariaLabel" :aria-disabled="isDisabled">
+  <button :class="classes" :disabled="isDisabled || isLoading" :aria-label="ariaLabel" :aria-disabled="isDisabled || isLoading">
     <i v-if="showIcon" :class="[ns.e('icon')]">
-      <OhIcon v-if="loading" name="line-md:loading-loop" />
+      <OhIcon v-if="isLoading" name="line-md:loading-loop" />
       <OhIcon v-else-if="isString(icon)" :name="icon" />
       <component :is="icon" />
     </i>
