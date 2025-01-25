@@ -28,10 +28,19 @@
     padding: getDimensionValue(padding, 1) getDimensionValue(padding, 2);
     gap: getDimensionValue(gap, '0-5');
 
+    @include with-m(radius-sm) {
+      border-radius: getDimensionValue(border-radius, base);
+    }
+    @include with-m(radius-md) {
+      border-radius: getDimensionValue(border-radius, md);
+    }
+    @include with-m(radius-lg) {
+      border-radius: getDimensionValue(border-radius, lg);
+    }
+
     @include include-e(icon) {
       font-size: getDimensionValue(size, 4);
     }
-
     @include with-is(icon-only) {
       padding: getDimensionValue(padding, 0);
       width: getDimensionValue(size, 7);
@@ -43,10 +52,19 @@
     padding: getDimensionValue(padding, 1) getDimensionValue(padding, 3);
     gap: getDimensionValue(gap, 1);
 
+    @include with-m(radius-sm) {
+      border-radius: getDimensionValue(border-radius, md);
+    }
+    @include with-m(radius-md) {
+      border-radius: getDimensionValue(border-radius, lg);
+    }
+    @include with-m(radius-lg) {
+      border-radius: getDimensionValue(border-radius, xl);
+    }
+
     @include include-e(icon) {
       font-size: getDimensionValue(size, 5);
     }
-
     @include with-is(icon-only) {
       padding: getDimensionValue(padding, 0);
       width: getDimensionValue(size, 8);
@@ -58,10 +76,19 @@
     padding: getDimensionValue(padding, 1) getDimensionValue(padding, 4);
     gap: getDimensionValue(gap, 1);
 
+    @include with-m(radius-sm) {
+      border-radius: getDimensionValue(border-radius, lg);
+    }
+    @include with-m(radius-md) {
+      border-radius: getDimensionValue(border-radius, xl);
+    }
+    @include with-m(radius-lg) {
+      border-radius: getDimensionValue(border-radius, 2xl);
+    }
+
     @include include-e(icon) {
       font-size: getDimensionValue(size, 6);
     }
-
     @include with-is(icon-only) {
       padding: getDimensionValue(padding, 0);
       width: getDimensionValue(size, 9);
@@ -71,15 +98,6 @@
 
   @include m(radius-none) {
     border-radius: getDimensionValue(border-radius, none);
-  }
-  @include m(radius-sm) {
-    border-radius: getDimensionValue(border-radius, sm);
-  }
-  @include m(radius-md) {
-    border-radius: getDimensionValue(border-radius, md);
-  }
-  @include m(radius-lg) {
-    border-radius: getDimensionValue(border-radius, lg);
   }
   @include m(radius-full) {
     border-radius: getDimensionValue(border-radius, full);
