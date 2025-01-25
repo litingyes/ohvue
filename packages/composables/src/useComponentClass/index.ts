@@ -17,12 +17,12 @@ export function useComponentClass(componentName: string, options?: UseClassOptio
 
   const e = (e: string) => `${b}__${kebabCase(e)}`
 
-  const m = (m: string) => `${b}--${kebabCase(m)}`
+  const m = (m: string, isValid = true) => isValid ? `${b}--${kebabCase(m)}` : undefined
 
-  const is = (state: string) => `${b}--is-${kebabCase(state)}`
+  const is = (state: string, isValid = true) => isValid ? `${b}--is-${kebabCase(state)}` : undefined
 
-  const em = (e: string, m: string) => `${b}__${kebabCase(e)}--${kebabCase(m)}`
-  const eis = (e: string, state: string) => `${b}__${kebabCase(e)}--is-${kebabCase(state)}`
+  const em = (e: string, m: string, isValid = true) => isValid ? `${b}__${kebabCase(e)}--${kebabCase(m)}` : undefined
+  const eis = (e: string, state: string, isValid = true) => isValid ? `${b}__${kebabCase(e)}--is-${kebabCase(state)}` : undefined
 
   return {
     b,

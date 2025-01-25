@@ -14,6 +14,15 @@
     transform: scale(0.98);
   }
 
+  @include with-is('disabled') {
+    cursor: not-allowed;
+    filter: grayscale(50%);
+
+    &:active {
+      transform: none;
+    }
+  }
+
   @include m(size-sm) {
     font: getTextStyleValue(sm);
     padding: getDimensionValue(padding, 1) getDimensionValue(padding, 2);
@@ -85,12 +94,24 @@
         background: getColorValue(gray-500);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(gray-400);
+        }
+      }
+
       @include theme(dark) {
         color: getThemeValue(dark, foreground-inverse);
         background: getColorValue(gray-600);
 
         &:hover {
           background: getColorValue(gray-500);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: getColorValue(gray-600);
+          }
         }
       }
     }
@@ -103,12 +124,24 @@
         background: getColorValue(gray-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(gray-50);
         border-color: getColorValue(gray-800);
 
         &:hover {
           background: getColorValue(gray-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -120,11 +153,23 @@
         background: getColorValue(gray-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(gray-50);
 
         &:hover {
           background: getColorValue(gray-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -137,12 +182,24 @@
         background: getColorValue(gray-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(gray-100);
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(gray-50);
         background: getColorValue(gray-900);
 
         &:hover {
           background: getColorValue(gray-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: getColorValue(gray-800);
+          }
         }
       }
     }
@@ -155,12 +212,24 @@
         background: getColorValue(gray-400);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(gray-50);
         border-color: getColorValue(gray-600);
 
         &:hover {
           background: getColorValue(gray-600);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -175,6 +244,13 @@
         box-shadow: 2px 8px 20px 0 getColorValue(gray-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(gray-400);
+          box-shadow: 2px 8px 20px 2px getColorValue(gray-200);
+        }
+      }
+
       @include theme(dark) {
         color: getThemeValue(dark, foreground-inverse);
         background: getColorValue(gray-600);
@@ -183,6 +259,13 @@
         &:hover {
           background: getColorValue(gray-500);
           box-shadow: 2px 8px 20px 0 getColorValue(gray-950);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: getColorValue(gray-600);
+            box-shadow: 2px 8px 20px 1px getColorValue(gray-900);
+          }
         }
       }
     }
@@ -195,6 +278,12 @@
       &:hover {
         background: getColorValue(primary-600);
       }
+
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(primary-700);
+        }
+      }
     }
 
     @include with-m(variant-bordered) {
@@ -205,12 +294,24 @@
         background: getColorValue(primary-50);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(primary-400);
         border-color: getColorValue(primary-600);
 
         &:hover {
           background: getColorValue(primary-950);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -222,11 +323,23 @@
         background: getColorValue(primary-100);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(primary-400);
 
         &:hover {
           background: getColorValue(primary-900);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -239,12 +352,24 @@
         background: getColorValue(primary-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(primary-100);
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(primary-400);
         background: getColorValue(primary-900);
 
         &:hover {
           background: getColorValue(primary-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: getColorValue(primary-900);
+          }
         }
       }
     }
@@ -258,6 +383,13 @@
         background: getColorValue(primary-400);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          color: getColorValue(primary-600);
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(primary-400);
         border-color: getColorValue(primary-600);
@@ -265,6 +397,13 @@
         &:hover {
           color: getThemeValue(theme, foreground-inverse);
           background: getColorValue(primary-600);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            color: getColorValue(primary-400);
+            background: transparent;
+          }
         }
       }
     }
@@ -279,11 +418,24 @@
         box-shadow: 2px 8px 20px 0 getColorValue(primary-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(primary-700);
+          box-shadow: 2px 8px 20px 2px getColorValue(primary-200);
+        }
+      }
+
       @include theme(dark) {
         box-shadow: 2px 8px 20px 2px getColorValue(primary-800);
 
         &:hover {
           box-shadow: 2px 8px 20px 0 getColorValue(primary-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            box-shadow: 2px 8px 20px 2px getColorValue(primary-800);
+          }
         }
       }
     }
@@ -296,6 +448,12 @@
       &:hover {
         background: getColorValue(green-600);
       }
+
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(green-700);
+        }
+      }
     }
 
     @include with-m(variant-bordered) {
@@ -306,12 +464,24 @@
         background: getColorValue(green-50);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(green-400);
         border-color: getColorValue(green-600);
 
         &:hover {
           background: getColorValue(green-950);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -323,11 +493,23 @@
         background: getColorValue(green-100);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(green-400);
 
         &:hover {
           background: getColorValue(green-900);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -340,12 +522,24 @@
         background: getColorValue(green-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(green-100);
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(green-400);
         background: getColorValue(green-900);
 
         &:hover {
           background: getColorValue(green-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: getColorValue(green-900);
+          }
         }
       }
     }
@@ -359,6 +553,13 @@
         background: getColorValue(green-400);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          color: getColorValue(green-600);
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(green-400);
         border-color: getColorValue(green-600);
@@ -366,6 +567,13 @@
         &:hover {
           color: getThemeValue(theme, foreground-inverse);
           background: getColorValue(green-600);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            color: getColorValue(green-400);
+            background: transparent;
+          }
         }
       }
     }
@@ -380,11 +588,24 @@
         box-shadow: 2px 8px 20px 0 getColorValue(green-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(green-700);
+          box-shadow: 2px 8px 20px 2px getColorValue(green-200);
+        }
+      }
+
       @include theme(dark) {
         box-shadow: 2px 8px 20px 2px getColorValue(green-800);
 
         &:hover {
           box-shadow: 2px 8px 20px 0 getColorValue(green-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            box-shadow: 2px 8px 20px 2px getColorValue(green-800);
+          }
         }
       }
     }
@@ -397,6 +618,12 @@
       &:hover {
         background: getColorValue(yellow-600);
       }
+
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(yellow-700);
+        }
+      }
     }
 
     @include with-m(variant-bordered) {
@@ -407,12 +634,24 @@
         background: getColorValue(yellow-50);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(yellow-400);
         border-color: getColorValue(yellow-600);
 
         &:hover {
           background: getColorValue(yellow-950);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -424,11 +663,23 @@
         background: getColorValue(yellow-100);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(yellow-600);
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(yellow-400);
 
         &:hover {
           background: getColorValue(yellow-900);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -441,12 +692,24 @@
         background: getColorValue(yellow-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(yellow-100);
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(yellow-400);
         background: getColorValue(yellow-900);
 
         &:hover {
           background: getColorValue(yellow-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: getColorValue(yellow-900);
+          }
         }
       }
     }
@@ -460,6 +723,13 @@
         background: getColorValue(yellow-400);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          color: getColorValue(yellow-600);
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(yellow-400);
         border-color: getColorValue(yellow-600);
@@ -467,6 +737,13 @@
         &:hover {
           color: getThemeValue(theme, foreground-inverse);
           background: getColorValue(yellow-600);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            color: getColorValue(yellow-400);
+            background: transparent;
+          }
         }
       }
     }
@@ -481,11 +758,24 @@
         box-shadow: 2px 8px 20px 0 getColorValue(yellow-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(yellow-700);
+          box-shadow: 2px 8px 20px 2px getColorValue(yellow-200);
+        }
+      }
+
       @include theme(dark) {
         box-shadow: 2px 8px 20px 2px getColorValue(yellow-800);
 
         &:hover {
           box-shadow: 2px 8px 20px 0 getColorValue(yellow-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            box-shadow: 2px 8px 20px 2px getColorValue(yellow-800);
+          }
         }
       }
     }
@@ -498,6 +788,12 @@
       &:hover {
         background: getColorValue(red-600);
       }
+
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(red-700);
+        }
+      }
     }
 
     @include with-m(variant-bordered) {
@@ -508,12 +804,24 @@
         background: getColorValue(red-50);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(red-400);
         border-color: getColorValue(red-600);
 
         &:hover {
           background: getColorValue(red-950);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -525,11 +833,23 @@
         background: getColorValue(red-100);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(red-400);
 
         &:hover {
           background: getColorValue(red-900);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -542,12 +862,24 @@
         background: getColorValue(red-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(red-100);
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(red-400);
         background: getColorValue(red-900);
 
         &:hover {
           background: getColorValue(red-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            background: getColorValue(red-900);
+          }
         }
       }
     }
@@ -561,6 +893,13 @@
         background: getColorValue(red-400);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          color: getColorValue(red-600);
+          background: transparent;
+        }
+      }
+
       @include theme(dark) {
         color: getColorValue(red-400);
         border-color: getColorValue(red-600);
@@ -568,6 +907,13 @@
         &:hover {
           color: getThemeValue(theme, foreground-inverse);
           background: getColorValue(red-600);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            color: getColorValue(red-400);
+            background: transparent;
+          }
         }
       }
     }
@@ -582,11 +928,24 @@
         box-shadow: 2px 8px 20px 0 getColorValue(red-200);
       }
 
+      @include with-is('disabled') {
+        &:hover {
+          background: getColorValue(red-700);
+          box-shadow: 2px 8px 20px 2px getColorValue(red-200);
+        }
+      }
+
       @include theme(dark) {
         box-shadow: 2px 8px 20px 2px getColorValue(red-800);
 
         &:hover {
           box-shadow: 2px 8px 20px 0 getColorValue(red-800);
+        }
+
+        @include with-is('disabled') {
+          &:hover {
+            box-shadow: 2px 8px 20px 2px getColorValue(red-800);
+          }
         }
       }
     }
