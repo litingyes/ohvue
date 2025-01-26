@@ -29,13 +29,13 @@
     gap: getDimensionValue(gap, '0-5');
 
     @include with-m(radius-sm) {
-      border-radius: getDimensionValue(border-radius, base);
+      border-radius: getDimensionValue(border-radius, xs);
     }
     @include with-m(radius-md) {
-      border-radius: getDimensionValue(border-radius, md);
+      border-radius: getDimensionValue(border-radius, sm);
     }
     @include with-m(radius-lg) {
-      border-radius: getDimensionValue(border-radius, lg);
+      border-radius: getDimensionValue(border-radius, md);
     }
 
     @include include-e(icon) {
@@ -53,13 +53,13 @@
     gap: getDimensionValue(gap, 1);
 
     @include with-m(radius-sm) {
-      border-radius: getDimensionValue(border-radius, md);
+      border-radius: getDimensionValue(border-radius, sm);
     }
     @include with-m(radius-md) {
-      border-radius: getDimensionValue(border-radius, lg);
+      border-radius: getDimensionValue(border-radius, md);
     }
     @include with-m(radius-lg) {
-      border-radius: getDimensionValue(border-radius, xl);
+      border-radius: getDimensionValue(border-radius, lg);
     }
 
     @include include-e(icon) {
@@ -77,13 +77,13 @@
     gap: getDimensionValue(gap, 1);
 
     @include with-m(radius-sm) {
-      border-radius: getDimensionValue(border-radius, lg);
+      border-radius: getDimensionValue(border-radius, md);
     }
     @include with-m(radius-md) {
-      border-radius: getDimensionValue(border-radius, xl);
+      border-radius: getDimensionValue(border-radius, lg);
     }
     @include with-m(radius-lg) {
-      border-radius: getDimensionValue(border-radius, 2xl);
+      border-radius: getDimensionValue(border-radius, xl);
     }
 
     @include include-e(icon) {

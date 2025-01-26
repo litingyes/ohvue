@@ -51,10 +51,10 @@
     "none": {
       "$value": "{size.0}"
     },
-    "sm": {
+    "xs": {
       "$value": "{size.0-5}"
     },
-    "base": {
+    "sm": {
       "$value": "{size.1}"
     },
     "md": {
@@ -69,8 +69,11 @@
     "2xl": {
       "$value": "{size.4}"
     },
+    "3xl": {
+      "$value": "{size.5}"
+    },
     "full": {
-      "$value": "9999px"
+      "$value": "calc(infinity * 1px)"
     }
   },
   "borderWidth": {
